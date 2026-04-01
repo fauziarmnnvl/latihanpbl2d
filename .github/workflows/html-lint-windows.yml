@@ -3,7 +3,7 @@ name: Cek Kode HTML (Windows)
 on:
   push:
     branches:
-    - main
+      - main
   pull_request:
 
 jobs:
@@ -11,11 +11,11 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-    - name: Install HTMLHint
-      run: npm install -g htmlhint
+      - name: Install HTMLHint
+        run: npm install -g htmlhint
 
-    - name: Periksa HTML
-      run: htmlhint "**/*.html"
+      - name: Periksa HTML
+        run: htmlhint "**/*.html"
